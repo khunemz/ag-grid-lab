@@ -1,0 +1,20 @@
+<div style="margin-bottom: 1rem;">
+    <button (click)="setPriceOnToyota()">Set Price on Toyota</button>
+    <button (click)="setDataOnFord()">Set Data on Ford</button>
+    <button (click)="updateSort()" style="margin-left: 15px">Sort</button>
+    <button (click)="updateFilter()">Filter</button>
+  </div>
+  <ag-grid-angular
+    #agGrid
+    style="width: 500px; height: 500px;"
+    id="myGrid"
+    class="ag-theme-alpine"
+    [modules]="modules"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [animateRows]="true"
+    [getRowNodeId]="getRowNodeId"
+    (gridReady)="onGridReady($event)"
+    [frameworkComponents]="frameworkComponents"
+  ></ag-grid-angular>
